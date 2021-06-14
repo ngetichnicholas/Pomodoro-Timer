@@ -1,21 +1,32 @@
 # Created by https://www.toptal.com/developers/gitignore/api/flask
 # Edit at https://www.toptal.com/developers/gitignore?templates=flask
+<<<<<<< HEAD
 
+=======
+>>>>>>> 177e2fb2e4fea41f199de9d7330807ec7a32d5af
 ### Flask ###
 instance/*
 !instance/.gitignore
 .webassets-cache
 .env
+<<<<<<< HEAD
 
+=======
+>>>>>>> 177e2fb2e4fea41f199de9d7330807ec7a32d5af
 ### Flask.Python Stack ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+<<<<<<< HEAD
 
 # C extensions
 *.so
 
+=======
+# C extensions
+*.so
+>>>>>>> 177e2fb2e4fea41f199de9d7330807ec7a32d5af
 # Distribution / packaging
 .Python
 build/
@@ -34,17 +45,26 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+<<<<<<< HEAD
 
+=======
+>>>>>>> 177e2fb2e4fea41f199de9d7330807ec7a32d5af
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
+<<<<<<< HEAD
 
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
 
+=======
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+>>>>>>> 177e2fb2e4fea41f199de9d7330807ec7a32d5af
 # Unit test / coverage reports
 htmlcov/
 .tox/
@@ -59,16 +79,23 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 pytestdebug.log
+<<<<<<< HEAD
 
 # Translations
 *.mo
 *.pot
 
+=======
+# Translations
+*.mo
+*.pot
+>>>>>>> 177e2fb2e4fea41f199de9d7330807ec7a32d5af
 # Django stuff:
 *.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+<<<<<<< HEAD
 
 # Flask stuff:
 instance/
@@ -93,12 +120,31 @@ ipython_config.py
 # pyenv
 .python-version
 
+=======
+# Flask stuff:
+instance/
+# Scrapy stuff:
+.scrapy
+# Sphinx documentation
+docs/_build/
+doc/_build/
+# PyBuilder
+target/
+# Jupyter Notebook
+.ipynb_checkpoints
+# IPython
+profile_default/
+ipython_config.py
+# pyenv
+.python-version
+>>>>>>> 177e2fb2e4fea41f199de9d7330807ec7a32d5af
 # pipenv
 #   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
 #   However, in case of collaboration, if having platform-specific dependencies or dependencies
 #   having no cross-platform support, pipenv may install dependencies that don't work, or not
 #   install all needed dependencies.
 #Pipfile.lock
+<<<<<<< HEAD
 
 # poetry
 #poetry.lock
@@ -113,6 +159,17 @@ celerybeat.pid
 # SageMath parsed files
 *.sage.py
 
+=======
+# poetry
+#poetry.lock
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+__pypackages__/
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+# SageMath parsed files
+*.sage.py
+>>>>>>> 177e2fb2e4fea41f199de9d7330807ec7a32d5af
 # Environments
 # .env
 .env/
@@ -123,6 +180,7 @@ ENV/
 env.bak/
 venv.bak/
 pythonenv*
+<<<<<<< HEAD
 
 # Spyder project settings
 .spyderproject
@@ -134,10 +192,20 @@ pythonenv*
 # mkdocs documentation
 /site
 
+=======
+# Spyder project settings
+.spyderproject
+.spyproject
+# Rope project settings
+.ropeproject
+# mkdocs documentation
+/site
+>>>>>>> 177e2fb2e4fea41f199de9d7330807ec7a32d5af
 # mypy
 .mypy_cache/
 .dmypy.json
 dmypy.json
+<<<<<<< HEAD
 
 # Pyre type checker
 .pyre/
@@ -145,14 +213,25 @@ dmypy.json
 # pytype static type analyzer
 .pytype/
 
+=======
+# Pyre type checker
+.pyre/
+# pytype static type analyzer
+.pytype/
+>>>>>>> 177e2fb2e4fea41f199de9d7330807ec7a32d5af
 # operating system-related files
 # file properties cache/storage on macOS
 *.DS_Store
 # thumbnail cache on Windows
 Thumbs.db
+<<<<<<< HEAD
 
 # profiling data
 .prof
 
 
+=======
+# profiling data
+.prof
+>>>>>>> 177e2fb2e4fea41f199de9d7330807ec7a32d5af
 # End of https://www.toptal.com/developers/gitignore/api/flask
