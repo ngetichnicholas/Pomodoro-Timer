@@ -1,2 +1,36 @@
-<h1>Hello Developers</h1>
-<h2>Welcome to Pomodoro</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro-Timer</title>
+</head>
+<body><br><br>
+    <h1>Pomodoro Timer</h1> <br>
+    <p style="text-align: center;color: darkblue;"><b><i>Pomodoro App is an awesome platform used in office by workaholics. Once you login you will be able to set time to work and time to take a break and you can also see the work sessions you've completed .</i></b></p>
+    <hr>
+
+    <div class="sign"><h4 style="color: brown;"> <b> Please sign in or login to get access </b></h4></div>
+    <div id="container">
+        
+        <p id="work" class="label">Work:</p><p id="break" class="label">Break:</p><p id="cycles" class="label">Sessions:</p>
+        <!--Work Timer-->
+        <div id="work-timer" class="timer">   
+            <p id="w_minutes">30</p><p class="semicolon">:</p><p id="w_seconds">00</p>
+        </div>
+
+        <!--Cycle Counter-->
+        <p id="counter" class="timer">0</p>
+
+        <!--Break Timer-->
+        <div id="break-timer" class="timer">
+            <p id="b_minutes">05</p><p class="semicolon">:</p><p id="b_seconds">00</p>
+        </div>
+        <button id="start" class="btn">Start</button>
+        <button id="stop" class="btn">Pause</button>
+        <button id="reset" class="btn">Reset</button>
+    </div>
+</body><br><br>
+
+</html>
