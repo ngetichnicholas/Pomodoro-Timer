@@ -1,2 +1,48 @@
-<h1>Hello Developers</h1>
-<h2>Welcome to Pomodoro</h2>
+{% extends 'base.html' %}
+{% block content %}
+<audio id="audio">
+  <source src="../static/audio/alarm.mp3" type="audio/mp3">
+  <source src="../static/audio/bell.mp3" type="audio/mp3">
+</audio>
+
+<div id="timer">
+  <div class="buttons">
+    <div class="button selected" id="pomodoro-btn">Pomodoro</div>
+    <div class="button" id="short-break-btn">Short Break</div>
+    <div class="button" id="long-break-btn">Long Break</div>
+  </div>
+  <div id="countdown">25:00</div>
+  <div id="start-btn">Start</div>
+</div>
+
+<div id="current-task-display">
+  <div id="message">WORKING ON</div>
+  <div id="selected-task"></div>
+</div>
+
+<div id="tasks-container">
+  <ul id="tasks"></ul>
+  <div id="add-task-btn">Add Task</div>
+
+  <form id="task-form" class="hide">
+    <input id="text" type="text" placeholder="What are you working on?">
+    <label for="est-pomodoro">Est Pomodoro</label>
+    <input id="est-pomodoro" type="number">
+    <div id="btn-container">
+      <button id="save" type="submit">Save</button>
+      <button id="cancel" type="button">Cancel</button>
+    </div>
+  </form>
+</div>
+
+<template id="list-item-template">
+  <li class="list-item">
+    <input type="checkbox">
+    <span class="task-name"></span>
+    <div class="right">
+      <span class="pomodoro-count"></span>
+      <span class="delete-btn">Delete</span>
+    </div>
+  </li>
+</template>
+{% endblock %}
