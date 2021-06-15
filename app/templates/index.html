@@ -1,50 +1,37 @@
-<html>
 
-   <head>
-      <title>Login Page</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro-Timer</title>
+</head>
+<body><br><br>
+    <h1>Pomodoro Timer</h1> <br>
+    <p style="text-align: center;color: darkblue;"><b><i>Pomodoro App is an awesome platform used in office by workaholics. Once you login you will be able to set time to work and time to take a break and you can also see the work sessions you've completed .</i></b></p>
+    <hr>
 
-      <style type = "text/css">
-         body {
-            font-family:Arial, Helvetica, sans-serif;
-            font-size:14px;
-         }
-
-         label {
-            font-weight:bold;
-            width:100px;
-            font-size:14px;
-         }
-
-         .box {
-            border:#666666 solid 1px;
-         }
-      </style>
-
-   </head>
-
-   <body bgcolor = "#FFFFFF">
-
-      <div align = "center">
-        <div style = "width:300px; border: solid 1px #333333; " align = "left">
-           <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Login</b></div>
-
-           <div style = "margin:30px">
-
-              <form method="POST" action="C1.php">
-                 <label>UserName  :</label><input type = "text" name = "username" required = "box"/><br /><br />
-                 <label>Password  :</label><input type = "password" name = "password" required = "box" /><br/><br />
-
-
-                 <input type = "submit" name="submit" value = " Login "/><br />
-
-              </form>
-
-              <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
-
-           </div>
-
+    <div class="sign"><h4 style="color: brown;"> <b> Please sign in or login to get access </b></h4></div>
+    <div id="container">
+        
+        <p id="work" class="label">Work:</p><p id="break" class="label">Break:</p><p id="cycles" class="label">Sessions:</p>
+        <!--Work Timer-->
+        <div id="work-timer" class="timer">   
+            <p id="w_minutes">30</p><p class="semicolon">:</p><p id="w_seconds">00</p>
         </div>
 
-     </div>
-  </body>
+        <!--Cycle Counter-->
+        <p id="counter" class="timer">0</p>
+
+        <!--Break Timer-->
+        <div id="break-timer" class="timer">
+            <p id="b_minutes">05</p><p class="semicolon">:</p><p id="b_seconds">00</p>
+        </div>
+        <button id="start" class="btn">Start</button>
+        <button id="stop" class="btn">Pause</button>
+        <button id="reset" class="btn">Reset</button>
+    </div>
+</body><br><br>
+
 </html>
