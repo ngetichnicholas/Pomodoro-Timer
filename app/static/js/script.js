@@ -3,6 +3,8 @@ const pomodoroBtn = document.getElementById('pomodoro-btn')
 const shortBreakBtn = document.getElementById('short-break-btn')
 const longBreakBtn = document.getElementById('long-break-btn')
 const startBtn = document.getElementById('start-btn')
+const setSession = document.getElementById('setSessionInterval')
+const setBreak = document.getElementById('setBreakInterval')
 const countdownTimer = document.getElementById('countdown')
 const addTaskBtn = document.getElementById('add-task-btn')
 const addTaskForm = document.getElementById('task-form')
@@ -15,7 +17,7 @@ const template = document.getElementById('list-item-template')
 const selectedTask = document.getElementById('selected-task')
 const audio = document.getElementById('audio')
 let tasks = []
-let minutes = 25
+let minutes = 45
 let seconds = 60
 let pause = true
 let pomodoro = "pomodoro"
@@ -38,18 +40,16 @@ document.addEventListener('click', e => {
   e.target.classList.add('selected')
 
   // set timer
-  if (e.target.matches('#pomodoro-btn')) {
-    countdownTimer.innerHTML = '25:00'
+  if (e.target.matches('#setSessionInterval')) {
+    workTime = document.getElementById("workTime").value
+    countdownTimer.innerHTML = workTime+':00'
     pomodoro = "pomodoro"
-    minutes = 25
-  } else if (e.target.matches('#short-break-btn')) {
-    countdownTimer.innerHTML = '05:00'
+    minutes = workTime
+  } else if (e.target.matches('#setBreakInterval')) {
+    breakTime = document.getElementById("breakTime").value
+    countdownTimer.innerHTML = breakTime+':00'
     pomodoro = "short break"
-    minutes = 5
-  } else if (e.target.matches('#long-break-btn')) {
-    countdownTimer.innerHTML = '15:00'
-    pomodoro = "long break"
-    minutes = 15
+    minutes = breakTime
   }
 })
 
@@ -197,8 +197,8 @@ function reset() {
   // if current round is a break, set for pomodoro
   if (pomodoro === "short break" || pomodoro === "long break") {
     pomodoro = "pomodoro"
-    countdownTimer.innerHTML = '25:00'
-    minutes = 25
+    countdownTimer.innerHTML = '45:00'
+    minutes = 45
     pomodoroBtn.classList.add('selected')
     return
   }
@@ -212,13 +212,7 @@ function reset() {
     countdownTimer.innerHTML = '05:00'
     minutes = 5
     shortBreakBtn.classList.add('selected')
-  } else if (pomodoro === "pomodoro" && pomodorosCompleted === 4) {
-    pomodorosCompleted = 0
-    pomodoro = "long break"
-    countdownTimer.innerHTML = '15:00'
-    minutes = 15
-    longBreakBtn.classList.add('selected')
-  }
+  } 
 
   // if a task has been selected
   if (selectedTaskElement != null) {

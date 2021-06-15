@@ -6,12 +6,19 @@
 </audio>
 
 <div id="timer">
-  <div class="buttons">
-    <div class="button selected" id="pomodoro-btn">Work Session</div>
-    <div class="button" id="short-break-btn">Short Break</div>
-    <div class="button" id="long-break-btn">Long Break</div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="button selected" id="pomodoro-btn">Work Session</div>
+      <input placeholder="Number of minutes" min="1" max="60" type="number" id="workTime" class="form-control">
+      <button id="setSessionInterval" class="button">Set Session interval</button>
+    </div>
+    <div class="col-md-6">
+      <div class="button" id="short-break-btn">Take a Break</div>
+      <input placeholder="Number of minutes" min="5" max="10" type="number" id="breakTime" class="form-control">
+      <button id="setBreakInterval" class="button">Set Break interval</button>
+    </div>
   </div>
-  <div id="countdown">25:00</div>
+  <div id="countdown">45:00</div>
   <div id="start-btn">Start</div>
 </div>
 
