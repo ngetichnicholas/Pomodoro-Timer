@@ -5,7 +5,7 @@ from . import main
 @main.route('/', methods=["GET","POST"])
 def index():
 
-    if request.method == "POST"
+    if request.method == 'POST':
         work = int(request.form["work"])
         short_break = int(request.form["short_break"])
 
