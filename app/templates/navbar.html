@@ -41,23 +41,3 @@
     </div>
   </div>
 </nav>
-<ul class="navbar-nav ml-auto">
-  {% if current_user.is_authenticated %}
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-      aria-haspopup="true" aria-expanded="false">
-      <i class="fas fa-user"></i>
-    </a>
-    <div class="dropdown-menu dropdown-menu-right dropdown-default"
-      aria-labelledby="navbarDropdownMenuLink-333">
-      <a class="dropdown-item" href="{{url_for('main.profile',username=current_user.username)}}"><span class="badge badge-primary">{{current_user.username | capitalize}} <i class="fas fa-user"></i></span></a>
-      <a class="dropdown-item" href="{{url_for('auth.logout')}}">Sign Out <i class="fas fa-sign-out-alt"></i></a>
-    </div>
-  </li>
-  {%else%}
-  <li class="nav-item">
-    <a class="nav-link" href="{{url_for('auth.login')}}">Sign in
-    </a>
-  </li>
-  {%endif%}
-</ul>
