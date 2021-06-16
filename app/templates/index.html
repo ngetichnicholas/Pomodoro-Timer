@@ -19,9 +19,9 @@
 
 <div id="timer">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6 timer-setting">
       <div class="button selected" id="pomodoro-btn">Work Session</div>
-      <div class="number-input">
+      <div class="number-input session">
         <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
         <input placeholder="Number of minutes" min="1" max="60" value="45" type="number" id="workTime"
           class="form-control" />
@@ -31,15 +31,15 @@
         Set Session interval
       </button>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 timer-setting">
       <div class="button" id="short-break-btn">Take a Break</div>
       <div class="number-input">
         <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
         <input placeholder="Number of minutes" min="5" max="10" value="5" type="number" id="breakTime"
           class="form-control" />
         <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-        <input type="text" id="whatToDo" class="form-control" placeholder="What to do in break..">
-      </div>
+      </div><br>
+      <input type="text" id="whatToDo" class="form-control" placeholder="What do like to do in break.."><br>
       <button id="setBreakInterval" class="button">Set Break interval</button>
     </div>
   </div>
