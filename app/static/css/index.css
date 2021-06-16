@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&display=swap");
 
 body {
-  background-color: #e9c46a;
-  color: #264653;
+  background-color: #2a9d8f;
+  color: #001524;
+  font-size: 18px;
   font-family: "Fira Sans", sans-serif;
   margin: 0;
   padding: 0;
@@ -18,9 +19,19 @@ a {
   color: white !important;
   
 }
-h2 {
-  color: #78290f;
+h1 {
+  color: white;
   text-align: center;
+}
+h2 {
+  color: white;
+  text-align: center;
+}
+h4 {
+  color: white;
+}
+h3 {
+  color: #2a9d8f;
 }
 .dropdown a ,.user {
   color: #ff7d00 !important;
@@ -36,8 +47,8 @@ h2 {
   border-radius: 50% !important;
 }
 hr {
-  background-color: #78290f !important;
-  height: 3px;
+  background-color: white !important;
+  height: 1.5px;
 }
 .timer-setting {
   display: flex;
@@ -48,9 +59,6 @@ span a {
 }
 #sign {
   color: #ff7d00 !important;
-}
-h3 {
-  color: #001524;
 }
 #create-acc {
   background-color: green;
@@ -194,7 +202,8 @@ a {
   text-align: center;
 }
 .task {
-  height: 15vh;
+  height: 18vh;
+  background-color: #e5e5e5;
 }
 
 #tasks-container {
@@ -203,17 +212,8 @@ a {
 
 ul {
   padding: 0;
+  list-style: none;
 }
-
-li {
-  list-style-type: none;
-  padding: 20px 10px;
-  margin-bottom: 5px;
-  background-color: white;
-  color: black;
-  border-radius: 5px;
-}
-
 .right {
   float: right;
 }

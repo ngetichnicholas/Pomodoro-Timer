@@ -16,7 +16,9 @@
   <source src="../static/audio/alarm.mp3" type="audio/mp3" />
   <source src="../static/audio/bell.mp3" type="audio/mp3" />
 </audio>
-
+<div class="container">
+  <h1>Welcome to Pomodoro Timer</h1>
+</div>
 <div id="timer">
   <div class="row">
     <div class="col-md-6 timer-setting">
@@ -54,13 +56,99 @@
   </div>
   <div id="selected-task"></div>
 </div>
-
-<h2>Completed Work Session</h2>
-<div class="container">
-    <div class="row">
-        {{ macro.showTask(tasks) }}
-    </div>
+<div id="completeWork">
+  <h2>Completed Work Sessions</h2>
+  <div class="container">
+      <div class="row">
+          {{ macro.showTask(tasks) }}
+      </div>
+  </div>
 </div>
+<div class="container" id="about">
+  <h2>About Pomodoro</h2>
+  <hr>
+  <h4>What is Pomodoro?</h4>
+  <p>Pomodoro is a timer that works on desktop & mobile browser. The aim of this app is to help you focus on any task you are working on, such as study, writing, or coding. This app is inspired by Pomodoro Technique which is a time management method developed by Francesco Cirillo.</p>
+  <hr>
+  <h4>What is Pomodoro Technique?</h4>
+  <p>The Pomodoro Technique is created by Francesco Cirillo for a more productive way to work and study. The technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks. Each interval is known as a pomodoro, from the Italian word for 'tomato', after the tomato-shaped kitchen timer that Cirillo used as a university student. - Wikipedia</p>
+  <hr>
+  <h4>Features</h4>
+  <ul>
+    <li><strong>Responsive design</strong> that works with desktop and mobile</li>
+    <li><strong>Color transition</strong> to switch moods between work time and rest time</li>
+    <li><strong>Audio notification</strong> at the end of a timer period</li>
+    <li><strong>Customizable timer</strong> intervals to suit your preference</li>
+  </ul>
+</div>
+<footer class="text-center text-white" style="background-color: #264653;">
+  <!-- Grid container -->
+  <div class="container pt-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-linkedin"></i
+      ></a>
+      <!-- Github -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    <a href="">© 2021 Copyright:pomodoro@timer.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
   integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
