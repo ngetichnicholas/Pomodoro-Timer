@@ -14,10 +14,50 @@ nav {
   height: 8vh !important;
   padding-top: 1vh !important;
 }
+a {
+  color: white !important;
+  
+}
+h2 {
+  color: #78290f;
+  text-align: center;
+}
+.dropdown a ,.user {
+  color: #ff7d00 !important;
+}
+.dropdown a:hover ,.user:hover {
+  cursor: pointer;
+}
+.card-img img {
+  border-radius: 50% !important;
+}
+hr {
+  background-color: #78290f !important;
+  height: 3px;
+}
+span a {
+  color: white;
+}
+.pitch {
+  width: 80%;
+}
+#sign {
+  color: #ff7d00 !important;
+}
+h3 {
+  color: #001524;
+}
+#create-acc {
+  background-color: green;
+  color: #ff7d00;
+}
 @media (max-width: 1000px) {
   nav{
     height: auto !important;
   }
+}
+li {
+  background-color: unset !important;
 }
 input[type="number"] {
   -webkit-appearance: textfield;
@@ -107,6 +147,14 @@ a {
   font-weight: 500;
   padding: 20px;
 }
+#leisureActivity {
+  clear: both;
+  width: fit-content;
+  margin: auto;
+  font-size: 40px;
+  font-weight: 500;
+  padding: 20px;
+}
 
 #start-btn {
   width: 60px;
@@ -115,10 +163,12 @@ a {
   border-radius: 10px;
   text-align: center;
   background-color: #2a9d8f;
+  color: white;
   cursor: pointer;
 }
 .selected {
   background-color: green;
+  color: white;
 }
 
 #current-task-display {
@@ -126,6 +176,9 @@ a {
   padding-top: 30px;
   margin: auto;
   text-align: center;
+}
+.task {
+  height: 15vh;
 }
 
 #tasks-container {

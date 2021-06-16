@@ -5,6 +5,7 @@ const startBtn = document.getElementById('start-btn')
 const setSession = document.getElementById('setSessionInterval')
 const setBreak = document.getElementById('setBreakInterval')
 const countdownTimer = document.getElementById('countdown')
+const leisureWork = document.getElementById('leisureActivity')
 const addTaskBtn = document.getElementById('add-task-btn')
 const addTaskForm = document.getElementById('task-form')
 const cancelBtn = document.getElementById('cancel')
@@ -45,7 +46,15 @@ document.addEventListener('click', e => {
     pomodoro = "pomodoro"
     minutes = workTime
   } else if (e.target.matches('#setBreakInterval')) {
+    whatToDo = document.getElementById('whatToDo').value
     breakTime = document.getElementById("breakTime").value
+    if (whatToDo.length == 0) {
+      leisureWork.innerHTML = 'Please go to break and do something for leisure'
+    }
+    else {
+      leisureWork.innerHTML = 'Please go to break and do '+whatToDo
+
+    }
     countdownTimer.innerHTML = breakTime+':00'
     pomodoro = "short break"
     minutes = breakTime
