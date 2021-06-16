@@ -52,7 +52,7 @@
     <div class="col-md-5" id="user">
       {% if current_user %}
       <h3>You have {{user.tasks.count()}} Completed Work Session</h3>
-      {% for i in posts%}
+      {% for i in tasks%}
       <div class="card tasks">
         <h4>Title: {{i.title}}</h4>
         <h6>{{i.task}}</h6>

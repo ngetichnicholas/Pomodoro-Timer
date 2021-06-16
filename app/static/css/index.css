@@ -146,6 +146,14 @@ a {
   font-weight: 500;
   padding: 20px;
 }
+#leisureActivity {
+  clear: both;
+  width: fit-content;
+  margin: auto;
+  font-size: 50px;
+  font-weight: 500;
+  padding: 20px;
+}
 
 #start-btn {
   width: 60px;

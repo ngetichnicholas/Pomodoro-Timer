@@ -1,10 +1,10 @@
-{% macro showTask(piches) %}
+{% macro showTask(tasks) %}
 <div class="task">
-  {% if piches %}
-  {% for task in tasks %}
-  <h3 class="title">{{task.title}}</h3>
-  <p>{{task.post}}</p>
-  <p> Done by : <span class="user">{{task.user.username}}</span> on: <small class="text-muted mr-2">{{ task.time.strftime('%Y-%m-%d') }}</small></p>
+  {% if tasks %}
+  {% for task_item in tasks %}
+  <h3 class="title">{{task_item.title}}</h3>
+  <p>{{task_item.task}}</p>
+  <p> Done by : <span class="user">{{task_item.user.username}}</span> on: <small class="text-muted mr-2">{{ task_item.time.strftime('%Y-%m-%d') }}</small></p>
   {% endfor %}
   {% endif %}
 </div>

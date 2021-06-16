@@ -52,8 +52,9 @@ def timer():
     '''
     View for timer page that returns the index page and its data
     '''
+    tasks = Task.query.all()
 
-    return render_template('timer.html')
+    return render_template('timer.html',tasks= tasks)
 
 @main.route('/create_task', methods = ['POST','GET'])
 @login_required
