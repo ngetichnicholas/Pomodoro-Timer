@@ -1,6 +1,9 @@
 from flask import Flask,render_template,request,session,redirect, url_for
 from . import main
-
+from flask_login import login_required,current_user
+from ..models import User,Task
+from .forms import UpdateProfile,TaskForm
+from .. import db,photos
 # Views
 @main.route('/', methods=["GET","POST"])
 def index():
@@ -44,3 +47,17 @@ def timer():
     '''
 
     return render_template('timer.html')
+
+@main.route('/create_task', methods = ['POST','GET'])
+@login_required
+def create_task():
+    form = TaskForm()
+    if form.validate_on_submit():
+        title = form.title.data
+        task = form.task.data
+        user_id = current_user
+        new_task_object = Task(task=task,user_id=current_user._get_current_object().id,title=title)
+        new_task_object.save_p()
+        return redirect(url_for('main.index'))
+        
+    return render_template('save_task.html', form = form)
