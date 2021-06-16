@@ -13,29 +13,31 @@
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <a class="navbar-brand" href="{{url_for('main.timer')}}">TIMER</a>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="">
+          {% if current_user.is_authenticated %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" style='margin-right:30px' data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <i class="fas fa-user"></i>&nbsp;<strong>{{current_user.username}}</strong> </a>
+          <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
+            <a class="dropdown-item" href="{{url_for('main.profile',name=current_user.username)}}"><i
+                class="far fa-user"></i>&nbsp; My account</a><br>
+            <a class="dropdown-item" href="{{url_for('auth.logout')}}"><i class="fas fa-sign-out-alt"></i>&nbsp; Log
+              out</a>
+          </div>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('auth.login')}}" style='margin-right:30px'><i
+              class="fas fa-sign-in-alt"></i>&nbsp; <strong>Log In</strong></a>
+        </li>
+        <li class="nav-item">
+          <a style='margin-right:30px' class="nav-link" href="{{url_for('auth.signup')}}"><i
+              class="fas fa-user-plus"></i></i>&nbsp; <strong>Sign Up</strong></a>
+        </li>
+        {%endif%}
       </ul>
     </div>
   </div>
 </nav>
-<ul class="navbar-nav ml-auto">
-  {% if current_user.is_authenticated %}
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-      aria-haspopup="true" aria-expanded="false">
-      <i class="fas fa-user"></i>
-    </a>
-    <div class="dropdown-menu dropdown-menu-right dropdown-default"
-      aria-labelledby="navbarDropdownMenuLink-333">
-      <a class="dropdown-item" href="{{url_for('main.profile',username=current_user.username)}}"><span class="badge badge-primary">{{current_user.username | capitalize}} <i class="fas fa-user"></i></span></a>
-      <a class="dropdown-item" href="{{url_for('auth.logout')}}">Sign Out <i class="fas fa-sign-out-alt"></i></a>
-    </div>
-  </li>
-  {%else%}
-  <li class="nav-item">
-    <a class="nav-link" href="{{url_for('auth.login')}}">Sign in
-    </a>
-  </li>
-  {%endif%}
-</ul>
