@@ -1,7 +1,6 @@
 const pomodoroBtns = document.querySelectorAll('.button')
 const pomodoroBtn = document.getElementById('pomodoro-btn')
 const shortBreakBtn = document.getElementById('short-break-btn')
-const longBreakBtn = document.getElementById('long-break-btn')
 const startBtn = document.getElementById('start-btn')
 const setSession = document.getElementById('setSessionInterval')
 const setBreak = document.getElementById('setBreakInterval')

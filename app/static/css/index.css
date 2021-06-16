@@ -97,9 +97,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 #start-btn {
-  width: 40px;
+  width: 60px;
   margin: 10px auto 0;
-  padding: 10px 30px;
+  padding: 10px;
   border-radius: 10px;
   text-align: center;
   background-color: #2a9d8f;
@@ -193,9 +193,11 @@ li {
   display: none;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 800px) {
   #timer {
-    width: 400px;
+    width: 600px;
+    height: 600px;
+    padding: 50px;
   }
 }
 
