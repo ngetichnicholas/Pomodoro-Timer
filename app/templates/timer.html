@@ -49,29 +49,9 @@
 </div>
 
 <div id="tasks-container">
-  <ul id="tasks"></ul>
-  <div id="add-task-btn">Add Task</div>
-
-  <form id="task-form" class="hide">
-    <input id="text" type="text" placeholder="What are you working on?" />
-    <label for="work-session">Work Session</label>
-    <input id="work-session" type="number" />
-    <div id="btn-container">
-      <button id="save" type="submit">Save</button>
-      <button id="cancel" type="button">Cancel</button>
-    </div>
-  </form>
+  <a id="create-acc" class="nav-link" href="{{url_for('main.createtask')}}">Save Completed</a>
 </div>
-<template id="list-item-template">
-  <li class="list-item">
-    <input type="checkbox" />
-    <span class="task-name"></span>
-    <div class="right">
-      <span class="pomodoro-count"></span>
-      <span class="delete-btn">Delete</span>
-    </div>
-  </li>
-</template>
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
   integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"

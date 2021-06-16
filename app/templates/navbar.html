@@ -19,9 +19,6 @@
             <ul class="nav navbar-nav navbar-right">
         <li class="">
           {% if current_user.is_authenticated %}
-          <li class="nav-item">
-            <a id="create-acc" class="nav-link" href="{{url_for('main.new_pitch')}}">Create New Pitch</a>
-          </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" style='margin-right:30px' data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">
