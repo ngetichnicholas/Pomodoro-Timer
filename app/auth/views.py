@@ -29,6 +29,6 @@ def signup():
   if form.validate_on_submit():
     user = User(email = form.email.data, username = form.username.data, password = form.password.data)
     user.save_u()
-    mail_message("Welcome to the Pitch","email/welcome_user",user.email,user=user)
+    mail_message("Welcome to the Pomodoro","email/welcome_user",user.email,user=user)
     return redirect(url_for('auth.login'))
   return render_template('auth/rejister.html', r_form = form)
