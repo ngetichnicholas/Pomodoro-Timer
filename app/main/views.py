@@ -34,4 +34,13 @@ def short_break():
     '''
     View root page function that returns the index page and its data
     '''
-    return render_template('short_break.html', short_break=session["short_break"])
+    return render_template('index.html')
+
+@main.route('/timer')
+def timer():
+
+    '''
+    View for timer page that returns the index page and its data
+    '''
+
+    return render_template('timer.html')

@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&display=swap");
+
+body {
+  background-color: #e9c46a;
+  color: #264653;
+  font-family: "Fira Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+nav {
+  background-color: #264653 !important;
+  height: 8vh !important;
+  padding-top: 1vh !important;
+}
+@media (max-width: 1000px) {
+  nav{
+    height: auto !important;
+  }
+}
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.number-input {
+  border: 2px solid #ddd;
+  display: inline-flex;
+}
+
+.number-input,
+.number-input * {
+  box-sizing: border-box;
+}
+
+.number-input button {
+  outline:none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  margin: 0;
+  position: relative;
+}
+
+.number-input button:before,
+.number-input button:after {
+  display: inline-block;
+  position: absolute;
+  content: '';
+  width: 1rem;
+  height: 2px;
+  background-color: #212121;
+  transform: translate(-50%, -50%);
+}
+.number-input button.plus:after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.number-input input[type=number] {
+  font-family: sans-serif;
+  max-width: 5rem;
+  padding: .5rem;
+  border: solid #ddd;
+  border-width: 0 2px;
+  font-size: 2rem;
+  height: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+a {
+  color: white !important; 
+}
+#timer {
+  margin: 50px auto 0;
+  background-color: white;
+  border-radius: 10px;
+  padding: 40px 0 40px;
+}
+.buttons {
+  width: fit-content;
+  margin: auto;
+}
+.button {
+  float: left;
+  margin: 5px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 7px;
+}
+#countdown {
+  clear: both;
+  width: fit-content;
+  margin: auto;
+  font-size: 90px;
+  font-weight: 500;
+  padding: 20px;
+}
+
+#start-btn {
+  width: 60px;
+  margin: 10px auto 0;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #2a9d8f;
+  cursor: pointer;
+}
+.selected {
+  background-color: green;
+}
+
+#current-task-display {
+  width: 100%;
+  padding-top: 30px;
+  margin: auto;
+  text-align: center;
+}
+
+#tasks-container {
+  margin: auto;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  padding: 20px 10px;
+  margin-bottom: 5px;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+}
+
+.right {
+  float: right;
+}
+
+.delete-btn {
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#add-task-btn {
+  width: 200px;
+  margin: 0 auto 10px;
+  background-color: green;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+#task-form {
+  clear: both;
+  background-color: white;
+  color: black;
+  height: 100px;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+#text {
+  border: none;
+  width: 95%;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+#work-session {
+  margin: 10px 10px 0;
+  width: 50px;
+  padding: 5px;
+}
+
+#save,
+#cancel {
+  border: none;
+  width: 60px;
+  padding: 8px;
+  margin-left: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+}
+
+.hide {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  #timer {
+    width: 600px;
+    height: 600px;
+    padding: 50px;
+  }
+}
+
+@media (min-width: 470px) {
+  #task-form {
+    width: 470px;
+  }
+}
+
+@media (min-width: 500px) {
+  #tasks-container {
+    width: 500px;
+  }
+}
