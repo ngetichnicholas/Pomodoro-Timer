@@ -20,6 +20,7 @@ a {
 }
 h2 {
   color: #78290f;
+  text-align: center;
 }
 .dropdown a ,.user {
   color: #ff7d00 !important;
@@ -150,7 +151,7 @@ a {
   clear: both;
   width: fit-content;
   margin: auto;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 500;
   padding: 20px;
 }
@@ -162,10 +163,12 @@ a {
   border-radius: 10px;
   text-align: center;
   background-color: #2a9d8f;
+  color: white;
   cursor: pointer;
 }
 .selected {
   background-color: green;
+  color: white;
 }
 
 #current-task-display {
@@ -173,6 +176,9 @@ a {
   padding-top: 30px;
   margin: auto;
   text-align: center;
+}
+.task {
+  height: 15vh;
 }
 
 #tasks-container {

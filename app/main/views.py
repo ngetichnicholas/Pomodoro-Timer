@@ -10,7 +10,9 @@ def index():
     '''
     View root page function that returns the index page and its data
     '''
-    return render_template('index.html')
+    tasks = Task.query.all()
+
+    return render_template('index.html',tasks= tasks)
 
 @main.route('/user/<name>')
 def profile(name):
@@ -45,16 +47,6 @@ def update_pic(name):
         user.profile_pic_path = path
         db.session.commit()
     return redirect(url_for('main.profile',name=name))
-
-@main.route('/timer')
-def timer():
-
-    '''
-    View for timer page that returns the index page and its data
-    '''
-    tasks = Task.query.all()
-
-    return render_template('timer.html',tasks= tasks)
 
 @main.route('/create_task', methods = ['POST','GET'])
 @login_required

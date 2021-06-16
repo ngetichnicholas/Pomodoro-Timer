@@ -48,7 +48,13 @@ document.addEventListener('click', e => {
   } else if (e.target.matches('#setBreakInterval')) {
     whatToDo = document.getElementById('whatToDo').value
     breakTime = document.getElementById("breakTime").value
-    leisureWork.innerHTML = 'Please go to break and do '+whatToDo
+    if (whatToDo.length == 0) {
+      leisureWork.innerHTML = 'Please go to break and do something for leisure'
+    }
+    else {
+      leisureWork.innerHTML = 'Please go to break and do '+whatToDo
+
+    }
     countdownTimer.innerHTML = breakTime+':00'
     pomodoro = "short break"
     minutes = breakTime
