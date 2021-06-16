@@ -55,6 +55,9 @@ h3 {
     height: auto !important;
   }
 }
+li {
+  background-color: unset !important;
+}
 input[type="number"] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
