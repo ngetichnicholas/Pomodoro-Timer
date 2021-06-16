@@ -1,4 +1,13 @@
 {% extends 'base.html' %}
+
+<!-- Styles block -->
+{% block styles%}
+{{ super() }}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="../static/css/index.css" />
+{% endblock %}
+
+{% block content %}
 <h1>Pomodoro Timer</h1> <br>
 <p style="text-align: center;color: darkblue;"><b><i>Pomodoro App is an awesome platform used in office by workaholics.
             Once you login you will be able to set time to work and time to take a break and you can also see the work
@@ -22,3 +31,4 @@
     </form>
 
 </div>
+{% endblock  %}
