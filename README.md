@@ -1,6 +1,8 @@
 # Pomodoro
 ## Authors
-By [Roney Juma](https://github.com/Roney-juma), [Anne Chege](https://github.com/annechege), [Gabriel Ayuel](https://github.com/ayuelgarang105), and [Nicholas Ngetich](https://github.com/ngetichnicholas)
+[Roney Juma](https://github.com/Roney-juma), [Anne Chege](https://github.com/annechege), [Gabriel Ayuel](https://github.com/ayuelgarang105), and [Nicholas Ngetich](https://github.com/ngetichnicholas)
+*****
+![alt text](https://github.com/Roney-juma/Pomodoro-Flask/blob/master/app/static/images/homepage.png)
 *****
 This is a Python Flask application that reminds people to take a break at work session.A user can log into the application and can set the amount of time he/she wants to work.The user can also set the amount of time he/she wants to be on break and see how much time they have left for working or taking a break. (A countdown clock).
 *****
