@@ -209,8 +209,9 @@ a {
   text-align: center;
 }
 .task {
-  height: 18vh;
+  min-height: 20vh !important;
   background-color: #e5e5e5;
+  border: 1px solid #2a9d8f !important;
 }
 
 #tasks-container {
