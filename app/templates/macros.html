@@ -1,7 +1,7 @@
 {% macro showTask(tasks) %}
 {% if tasks %}
 {% for task_item in tasks %}
-<div class="col-md-4 task">
+<div class="col-md-4 col-sm-6 col-xs-12 task">
   <h3 class="title">{{task_item.title}}</h3>
   <p>{{task_item.task}}</p>
   <p> Done by : <span class="user">{{task_item.user.username}}</span> on: <small class="text-muted mr-2">{{
