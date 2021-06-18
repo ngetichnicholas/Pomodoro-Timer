@@ -64,6 +64,12 @@ span a {
 #sign {
   color: #ff7d00 !important;
 }
+.user-works {
+  text-align: unset !important;
+}
+.profile-task {
+  padding: 2rem !important;
+}
 #create-acc {
   background-color: green;
   color: #ff7d00;

@@ -37,7 +37,7 @@
           {% if user.bio %}
           <p><i class="fas fa-quote-left"></i> {{user.bio}}</p>
           {%else%}
-          <p> {{user.username| capitalize}} has no bio </p>
+          <p class="user"> {{user.username| capitalize}} has no bio </p>
           {% endif %}
           {% if user == current_user %}
           <div class="profpic">
@@ -50,15 +50,16 @@
       </div>
     </div>
     <div class="col-md-1"></div>
-    <div class="col-md-5" id="user">
+    <div class="col-md-5 profile-task">
       {% if current_user %}
-      <h2>You have {{user.tasks.count()}} Completed Work Session</h2>
+      <h2 class="user-works">{{user.tasks.count()}} Completed Work Session</h2>
       {% for i in tasks%}
-      <div class="card tasks">
-        <h4>Title: {{i.title}}</h4>
-        <h6>{{i.task}}</h6>
+      <div class="task">
+        <h3 class="title">Title: {{i.title}}</h4>
+        <p>{{i.task}}</p>
+        <p> Completed on: <small class="text-muted mr-2">{{
+          i.time.strftime('%Y-%m-%d') }}</small></p>
       </div>
-      <hr>
 
       {%endfor%}
       {%else%}
