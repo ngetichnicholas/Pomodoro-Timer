@@ -4,7 +4,7 @@
 *****
 This is a Python Flask application that reminds people to take a break at work session.A user can log into the application and can set the amount of time he/she wants to work.The user can also set the amount of time he/she wants to be on break and see how much time they have left for working or taking a break. (A countdown clock).
 *****
-![alt text](https://github.com/Roney-juma/Pomodoro-Flask/blob/master/app/static/images/homepage.png)
+![alt text](https://github.com/ngetichnicholas/Pomodoro-Timer/blob/master/app/static/images/homepage.png)
 *****
 ### Prerequisites
 * Python 3
